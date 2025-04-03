@@ -81,6 +81,4 @@ def main():
 
 
 if __name__ == '__main__':
-    # tello.test_capture()
-    # cameratest.run()
     main()
