@@ -62,16 +62,3 @@ def test_tracker():
 
     for val in [0, -1, 1, -2, 2, -5, 5, -10, 10]:
         print(f'val: {val} tracker output: {t.update(val)}')
-
-
-# Reference: https://stackoverflow.com/a/1969274
-# def translate(value, a, b, x, y):
-#     # Figure out how 'wide' each range is
-#     in_span = b - a
-#     out_span = y - x
-#
-#     # Convert the left range into a 0-1 range (float)
-#     scaled_val = float(value - a) / float(in_span)
-#
-#     # Convert the 0-1 range into a value in the right range.
-#     return x + (scaled_val * out_span)

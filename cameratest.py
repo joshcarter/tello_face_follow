@@ -57,18 +57,9 @@ def track_face(info, w):
     up_down_vel = 0
 
     if area > 0:
-        # yaw_vel = yaw_pid.update(x - w // 2)
-        # print(f'yaw {yaw_tracker} value {x}')
-        # forward_back_vel = forward_back_pid.update((25000 - area) // 10)
         yaw_vel = yaw_tracker.update(x)
         up_down_vel = up_down_tracker.update(y)
         forward_back_vel = forward_back_tracker.update(area)
-
-    # foward_back_vel = 0
-    # if area > forward_back_range[1]:
-    #     foward_back_vel = -20
-    # elif area < forward_back_range[0] and area != 0:
-    #     foward_back_vel = 20
 
     print(f'forward/back: {forward_back_vel} up/down: {up_down_vel} yaw: {yaw_vel}')
 

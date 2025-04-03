@@ -20,37 +20,3 @@ class SlidingWindowAverager:
     def avg(self, n):
         self.append(n)
         return self.value()
-
-
-        # from https://stackoverflow.com/a/14314054
-        # n = len(self.q)
-        # ret = np.cumsum(self.q, dtype=float)
-        # ret[n:] = ret[n:] - ret[:-n]
-        # return (ret[n - 1:] / n)[0]
-
-
-# def test():
-#     a = SlidingWindowAverager(5)
-#     a.append(1)
-#     print(a.value())
-#     a.append(2)
-#     print(a.value())
-#     a.append(3)
-#     print(a.value())
-#     a.append(4)
-#     print(a.value())
-#     a.append(5)
-#     print(a.value())
-#     a.append(5)
-#     print(a.value())
-#     a.append(5)
-#     print(a.value())
-#     a.append(12)
-#     print(a.value())
-#     a.append(5)
-#     print(a.value())
-#     a.append(5)
-#     print(a.value())
-#     a.append(5)
-#     print(a.value())
-#
